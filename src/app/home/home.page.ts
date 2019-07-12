@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  today: number;
 
-  constructor() {}
+  constructor() {
+    // get the current time and date
+    this.today = Date.now();
+  }
 
 }

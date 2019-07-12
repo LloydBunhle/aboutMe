@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title color="secondary">
+         Search
+        </ion-title>
+      </ion-toolbar>
+</ion-header>
+<ion-searchbar showCancelButton="true" [(ngModel)]="searchTerm" (ionChange)="setFilteredImage()">
+</ion-searchbar>
+
+<ion-content>
+    <ion-card  *ngFor="let item of imagesService.Image">
+        <ion-card-content>
+            <ion-list>
+                <ion-item [routerLink]="'/fullimage/'+item.src" >
+                  <ion-thumbnail slot="start">
+                    <img src="assets/{{item.src}}">
+                  </ion-thumbnail>
+                  <ion-label>{{item.title | uppercase}}</ion-label>
+                </ion-item>
+              </ion-list>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

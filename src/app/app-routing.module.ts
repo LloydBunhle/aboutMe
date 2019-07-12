@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'geolocation', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
+  { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
+  { path: 'fullimage/:src', loadChildren: './fullimage/fullimage.module#FullimagePageModule' }
 ];
 
 @NgModule({

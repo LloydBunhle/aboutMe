@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button color="secondary"></ion-menu-button>
+        </ion-buttons>
+        <ion-title color="secondary">
+         Geolocation
+        </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div #map id="map" style="position: absolute;overflow: scroll;height: 50%;width: 100%;"></div>
+  <div class="details">
+      <ion-card>
+          <ion-item>
+            <ion-icon color="primary" name="map" slot="start"></ion-icon>
+            <p>Latitude : {{lat}}</p>
+          </ion-item>
+        
+          <ion-item>
+            <ion-icon color="primary" name="map" slot="start"></ion-icon>
+            <p>Longitude : {{lon}}</p>
+          </ion-item>
+      </ion-card> 
+
+  </div>  
+     
+</ion-content>
